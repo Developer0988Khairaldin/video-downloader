@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمل الفيديوهات - Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-download"></i>
+                <h1>محمل الفيديوهات</h1>
+            </div>
+            <p class="subtitle">حمّل فيديوهاتك المفضلة من إنستغرام وفيسبوك وتيك توك بدون علامة مائية</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="urlInput" 
+                        class="url-input" 
+                        placeholder="الصق رابط الفيديو من Instagram أو Facebook أو TikTok..."
+                        dir="ltr"
+                    >
+                    <button class="btn-download" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        <span>تحميل</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>جاري معالجة الرابط...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <span id="errorText"></span>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <span id="successText"></span>
+            </div>
+
+            <!-- Download Options Section -->
+            <div class="download-options" id="downloadOptions" style="display: none;">
+                <h2>خيارات التحميل المتاحة</h2>
+                
+                <!-- Video Downloads -->
+                <div class="quality-section">
+                    <h3><i class="fas fa-video"></i> تحميل كـ فيديو</h3>
+                    <div class="quality-buttons" id="videoQualityContainer">
+                        <!-- سيتم ملء هذا ديناميكياً -->
+                    </div>
+                </div>
+
+                <!-- Audio Download -->
+                <div class="audio-section">
+                    <h3><i class="fas fa-music"></i> تحميل كـ صوت / MP3</h3>
+                    <button class="btn-option btn-audio" id="audioBtn">
+                        <i class="fas fa-file-audio"></i>
+                        <div class="btn-content">
+                            <span class="btn-label">تحميل صوت MP3</span>
+                            <span class="btn-info">استخراج الصوت فقط</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Video Info Section -->
+                <div class="video-info" id="videoInfo">
+                    <h3>معلومات الفيديو</h3>
+                    <div class="info-details">
+                        <div class="info-item">
+                            <span class="info-label">العنوان:</span>
+                            <span class="info-value" id="videoTitle">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">المنصة:</span>
+                            <span class="info-value" id="videoPlatform">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">المدة:</span>
+                            <span class="info-value" id="videoDuration">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>آمن وموثوق</h3>
+                <p>لا نحفظ أي بيانات شخصية أو روابط</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <h3>سريع جداً</h3>
+                <p>معالجة فورية للروابط والتحميل المباشر</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-ban"></i>
+                <h3>بدون علامة مائية</h3>
+                <p>احصل على فيديوهاتك نظيفة وواضحة</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>متجاوب</h3>
+                <p>يعمل على جميع الأجهزة والشاشات</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 محمل الفيديوهات - جميع الحقوق محفوظة</p>
+            <p class="disclaimer">هذا الموقع للاستخدام الشخصي فقط. يرجى احترام حقوق المحتوى الأصلي.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
